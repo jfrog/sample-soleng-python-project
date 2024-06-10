@@ -23,7 +23,7 @@ jobs:
               env:
                 JF_URL: https://${{ vars.JF_URL }}/
                 JF_PROJECT: ${{ vars.JF_PROJECT }}
-                JF_ACCESS_TOKEN: ${{ vars.JF_ACCESS_TOKEN }}
+                JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
                   
             - name: Checkout the repository    
               uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
               with:
                 registry: ${{ vars.JF_URL }}
                 username: ${{ vars.JF_USER }}
-                password: ${{ vars.JF_ACCESS_TOKEN }}
+                password: ${{ secrets.JF_ACCESS_TOKEN }}
     
                 
             - name: Build Docker image    
