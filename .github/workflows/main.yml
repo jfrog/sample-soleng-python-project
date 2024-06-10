@@ -5,7 +5,7 @@ permissions:
   actions: read # for detecting the Github Actions environment.
   id-token: write # for creating OIDC tokens for signing.
   packages: write # for uploading attestations.
-  contents: read
+  contents: read #Ability to read the contents permission 
 jobs:
     build-publish-python:
         runs-on: ubuntu-latest
@@ -98,4 +98,4 @@ jobs:
         private-repository: true
       secrets:
         registry-username: ${{ vars.JF_USER }}
-        registry-password: ${{ vars.JF_ACCESS_TOKEN }}
+        registry-password: ${{ secrets.JF_ACCESS_TOKEN }}
