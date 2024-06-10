@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: jfrog/frogbot@v2
         with:
-          oidc-provider-name: ${{ vars.JF_PROJECT }} 
+          oidc-provider-name: jfrog-github-oidc 
         env:
           ACTIONS_STEP_DEBUG: true
           # [Mandatory]
