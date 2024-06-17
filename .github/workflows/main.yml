@@ -23,9 +23,10 @@ jobs:
               env:
                 JF_URL: https://${{ vars.JF_URL }}/
                 JF_PROJECT: ${{ vars.JF_PROJECT }}
-                JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+                #JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
               with:
-                  oidc-provider-name: meghraj-github-integration
+                  oidc-provider-name: meg-github-oidc
+                  oidc-audience: github-jfrog
                   
             - name: Checkout the repository    
               uses: actions/checkout@v4
