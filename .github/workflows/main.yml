@@ -61,7 +61,7 @@ jobs:
               with:
                 registry: ${{ vars.JF_URL }}
                 username: ${{ vars.JF_USER }}
-                password: ${{ secrets.JF_ACCESS_TOKEN }}
+                #password: ${{ secrets.JF_ACCESS_TOKEN }}
     
                 
             - name: Build Docker image    
