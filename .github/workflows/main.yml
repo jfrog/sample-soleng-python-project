@@ -5,7 +5,8 @@ permissions:
   actions: read # for detecting the Github Actions environment.
   id-token: write # for creating OIDC tokens for signing.
   packages: write # for uploading attestations.
-  contents: read #Ability to read the contents permission 
+  contents: read #Ability to read the contents permission
+  security-events: write # Required for uploading code scanning 
 jobs:
     build-publish-python:
         runs-on: ubuntu-latest
@@ -23,6 +24,8 @@ jobs:
               env:
                 JF_URL: https://${{ vars.JF_URL }}/
                 JF_PROJECT: ${{ vars.JF_PROJECT }}
+                # Required for uploading code scanning.
+                JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   version: 2.67.0
                   oidc-provider-name: jfrog-github-oidc
