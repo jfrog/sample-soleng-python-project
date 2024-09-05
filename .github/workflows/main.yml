@@ -24,6 +24,7 @@ jobs:
                 JF_URL: https://${{ vars.JF_URL }}/
                 JF_PROJECT: ${{ vars.JF_PROJECT }}
               with:
+                  version: 2.67.0
                   oidc-provider-name: jfrog-github-oidc
                   
             - name: Checkout the repository    
