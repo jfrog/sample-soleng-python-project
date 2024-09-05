@@ -27,7 +27,6 @@ jobs:
                 # Required for uploading code scanning.
                 JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  version: 2.67.0
                   oidc-provider-name: jfrog-github-oidc
                   
             - name: Checkout the repository    
