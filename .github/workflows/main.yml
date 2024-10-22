@@ -28,6 +28,7 @@ jobs:
                 JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   oidc-provider-name: jfrog-github-oidc
+                  version: latest
                   
             - name: Checkout the repository    
               uses: actions/checkout@v4
