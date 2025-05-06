@@ -1,4 +1,4 @@
 PyYAML==3.13b1
 nltk
 httplib2==0.18.2
-paramiko==1.18.4
+paramiko==2.0.9
