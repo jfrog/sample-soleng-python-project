@@ -118,7 +118,7 @@ jobs:
           # [Optional, Default: "FALSE"]
           # If TRUE, Frogbot creates a single pull request with all the fixes.
           # If false, Frogbot creates a separate pull request for each fix.
-          # JF_GIT_AGGREGATE_FIXES: "FALSE"
+          JF_GIT_AGGREGATE_FIXES: "FALSE"
 
           # [Optional, Default: "FALSE"]
           # Handle vulnerabilities with fix versions only
@@ -127,7 +127,7 @@ jobs:
           # [Optional]
           # Set the minimum severity for vulnerabilities that should be fixed and commented on in pull requests
           # The following values are accepted: Low, Medium, High or Critical
-          # JF_MIN_SEVERITY: ""
+          JF_MIN_SEVERITY: "Low"
 
           # [Optional]
           # List of comma-separated(,) email addresses to receive email notifications about secrets
