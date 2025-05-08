@@ -1,4 +1,7 @@
-PyYAML==3.13b1
 nltk
 httplib2==0.18.1
 paramiko==1.18.4
+PyYAML==6.0.1
+PyJWT==1.7.1
+numpy==1.14.5
+pandas==1.0.1
